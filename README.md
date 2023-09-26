@@ -1,7 +1,7 @@
 # ScriptSmith.css 
 **Author:** *Vladislav Levitskii*
 ## Demo site
-Link to **[demo](http://www.github.io)** site for preview.
+Link to **[demo](https://pslib-cz.github.io/2023-l4-web-typographic-library-VladislavLevitskii/)** site for preview.
 ## Dependecies
 ...
 ## Implementation
