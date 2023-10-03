@@ -1,0 +1,65 @@
+:root {
+    --primarycolor: #093427;
+}
+
+html {
+    font-family: 'Kameron', serif;
+}
+
+body {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.body__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.hamburger {
+    margin: auto 0;
+}
+
+.primarycolor {
+    background-color: var(--primarycolor);
+}
+
+.hamburger__line--1 {
+    width: 50px;
+    height: 10px;
+    background-color: var(--primarycolor);
+}
+
+.hamburger__line--2 {
+    width: 50px;
+    height: 10px;
+    margin: 7px 0;
+    background-color: var(--primarycolor);
+}
+
+.hamburger__line--3 {
+    width: 50px;
+    height: 10px;
+    background-color: var(--primarycolor);
+}
+
+.menuisopen {
+    display: none;
+}
+
+.active1 {
+    display: none;
+}
+
+.active2 {
+    display: none;
+}
+
+.active3 {
+    display: none;
+}
+
+.header__navigation {
+    display: none;
+}

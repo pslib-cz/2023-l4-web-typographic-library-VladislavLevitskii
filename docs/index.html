@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>ScriptSmith.css | Typographic library</title>
 </head>
 <body>
-    Test1
+    <header class="body__header">
+        <h1>ScriptSmith.css</h1>
+        <div class="hamburger">
+            <div class="hamburger__line--1"></div>
+            <div class="hamburger__line--2"></div>
+            <div class="hamburger__line--3"></div>
+        </div>
+        <ul class="header__navigation">
+            <li>Headings</li>
+            <li>Text</li>
+            <li>Lists</li>
+            <li>Table</li>
+            <li>Alerts</li>
+            <li>Gallery</li>
+            <li>Code</li>
+        </ul>
+    </header>
+
+    <script>
+    const hamburger = document.querySelector(".hamburger");
+    const hamburger__line1 = document.querySelector(".hamburger__line--1");
+    const hamburger__line2 = document.querySelector(".hamburger__line--2");
+    const hamburger__line3 = document.querySelector(".hamburger__line--3");
+
+    function toggleMenu() {
+        if (hamburger.classList.contains("menuisopen")) {
+        hamburger.classList.remove("menuisopen");
+        hamburger__line1.classList.remove("active1");
+        hamburger__line2.classList.remove("active2");
+        hamburger__line3.classList.remove("active3");
+        }   else {
+            hamburger.classList.add("menuisopen");
+            hamburger__line1.classList.add("active1");
+            hamburger__line2.classList.add("active2");
+            hamburger__line3.classList.add("active3");
+            }
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+    </script>
 </body>
 </html>
