@@ -15,51 +15,126 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .hamburger {
     margin: auto 0;
+    order: 2;
 }
 
 .primarycolor {
     background-color: var(--primarycolor);
 }
 
-.hamburger__line--1 {
+.hamburger__line {
     width: 50px;
     height: 10px;
     background-color: var(--primarycolor);
+}
+
+.hamburger__line--1 {
+    transition: .5s;
+    transform-origin: top left;
 }
 
 .hamburger__line--2 {
-    width: 50px;
-    height: 10px;
     margin: 7px 0;
-    background-color: var(--primarycolor);
+    transition: .5s;
 }
 
 .hamburger__line--3 {
-    width: 50px;
-    height: 10px;
-    background-color: var(--primarycolor);
-}
-
-.menuisopen {
-    display: none;
+    transition: .5s;
+    transform-origin: bottom left;
 }
 
 .active1 {
-    display: none;
+    transform: translateX(15px) rotate(45deg);
 }
 
 .active2 {
-    display: none;
+    transform: translateX(50px);
+    filter: opacity(0);
 }
 
 .active3 {
-    display: none;
+    transform: translateX(15px) rotate(-45deg);
 }
 
 .header__navigation {
-    display: none;
+    position: absolute;
+    right: 0;
+    transform: translateY(-800px);
+    transition-timing-function: cubic-bezier(0, 5, 0.58, 1);
+    top: 60px;
+    transition: .5s;
+}
+
+.header__navigation ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav--active {
+    transform: translate(0);
+    transition-timing-function: cubic-bezier(0, 5, 0.58, 1);
+}
+
+.header__navigation li {
+    background-color: var(--primarycolor);
+    color: white;
+    padding: 15px 50px 15px 50px;
+    font-size: 24px;
+}
+
+.header__navigation li a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__navigation li a:visited {
+    color: inherit;
+}
+
+
+/* typing  */
+
+
+
+.container {
+    display: flex;
+    margin: 30px 20px;
+  }
+  .container h2 span.typed-text {
+    font-weight: normal;
+    color: var(--primarycolor);
+  }
+
+  /*typing end*/
+
+
+@media screen and (min-width: 1000px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .header__navigation {
+        position: inherit;
+        transform: translate(0);
+        display: flex;
+        align-items: center;
+        transition: 0s;
+    }
+
+    .header__navigation ul {
+        display: flex;
+        margin: 0;
+        gap: 30px;
+    }
+
+    .header__navigation li {
+        background-color: transparent;
+        color: black;
+        padding: 0;
+    }
 }

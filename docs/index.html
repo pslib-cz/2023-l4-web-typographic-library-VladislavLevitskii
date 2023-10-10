@@ -13,23 +13,31 @@
     <header class="body__header">
         <h1>ScriptSmith.css</h1>
         <div class="hamburger">
-            <div class="hamburger__line--1"></div>
-            <div class="hamburger__line--2"></div>
-            <div class="hamburger__line--3"></div>
+            <div class="hamburger__line hamburger__line--1"></div>
+            <div class="hamburger__line hamburger__line--2"></div>
+            <div class="hamburger__line hamburger__line--3"></div>
         </div>
-        <ul class="header__navigation">
-            <li>Headings</li>
-            <li>Text</li>
-            <li>Lists</li>
-            <li>Table</li>
-            <li>Alerts</li>
-            <li>Gallery</li>
-            <li>Code</li>
-        </ul>
+        <nav class="header__navigation">
+            <ul>
+                <li><a href="#">Headings</a></li>
+                <li><a href="#">Text</a></li>
+                <li><a href="#">Lists</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Alerts</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Code</a></li>
+            </ul>
+        </nav>
     </header>
+    <div class="container">
+        <h2><span class="typed-text"></span></span></h1>
+    </div>
+
+
 
     <script>
     const hamburger = document.querySelector(".hamburger");
+    const navigation = document.querySelector(".header__navigation");
     const hamburger__line1 = document.querySelector(".hamburger__line--1");
     const hamburger__line2 = document.querySelector(".hamburger__line--2");
     const hamburger__line3 = document.querySelector(".hamburger__line--3");
@@ -40,15 +48,55 @@
         hamburger__line1.classList.remove("active1");
         hamburger__line2.classList.remove("active2");
         hamburger__line3.classList.remove("active3");
+        navigation.classList.remove("nav--active");
         }   else {
             hamburger.classList.add("menuisopen");
+            navigation.classList.add("nav--active");
             hamburger__line1.classList.add("active1");
             hamburger__line2.classList.add("active2");
             hamburger__line3.classList.add("active3");
+
             }
     }
 
     hamburger.addEventListener("click", toggleMenu);
+
+    const typedTextSpan = document.querySelector(".typed-text");
+
+    const textArray = ["Vítejte na ScriptSmith.css", "Willkommen in ScriptSmith.css", "Welcome to ScriptSmith.css", "Bienvenue sur ScriptSmith.css", "Добро пожаловать на ScriptSmith.css"];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 1500;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } 
+      else {
+      	setTimeout(erase, newTextDelay);
+      }
+    }
+
+    function erase() {
+    	if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } 
+      else {
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
     </script>
 </body>
 </html>
