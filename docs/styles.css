@@ -1,5 +1,6 @@
 :root {
     --primarycolor: #093427;
+    --background__colour: papayawhip;
 }
 
 html {
@@ -9,13 +10,20 @@ html {
 body {
     max-width: 1300px;
     margin: 0 auto;
+    background-color: var(--background__colour);
 }
 
 .body__header {
     display: flex;
+    margin-top: 15px;
     justify-content: space-between;
     padding: 0 20px;
     overflow: hidden;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .hamburger {
@@ -39,7 +47,7 @@ body {
 }
 
 .hamburger__line--2 {
-    margin: 7px 0;
+    margin: 6px 0;
     transition: .5s;
 }
 
@@ -83,8 +91,12 @@ body {
 .header__navigation li {
     background-color: var(--primarycolor);
     color: white;
-    padding: 15px 50px 15px 50px;
-    font-size: 24px;
+}
+
+.header__navigation li a p {
+    margin: 0;
+    font-size: 20px;
+    padding: 15px 50px 15px 20px;
 }
 
 .header__navigation li a:link {
@@ -96,22 +108,118 @@ body {
     color: inherit;
 }
 
-
-/* typing  */
-
-
-
 .container {
     display: flex;
     margin: 30px 20px;
   }
-  .container h2 span.typed-text {
-    font-weight: normal;
+
+.container h2 span.typed-text {
+    font-weight: bold;
     color: var(--primarycolor);
   }
 
-  /*typing end*/
+main {
+    margin: 0 20px;
+}
 
+.headings__grid {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    row-gap: 15px;
+    column-gap: 10px;
+    margin-bottom: 25px;
+}
+
+.headings__grid p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headings__grid h3 {
+    grid-column: span 3;
+    text-align: center;
+}
+
+.h1--simulation--mobile {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h2--simulation--mobile {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h3--simulation--mobile {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h4--simulation--mobile {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h5--simulation--mobile {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h6--simulation--mobile {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.h1--simulation--desktop {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h2--simulation--desktop {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h3--simulation--desktop {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h4--simulation--desktop {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h5--simulation--desktop {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+ 
+.h6--simulation--desktop {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .headings__pseudotable {
+        display: flex;
+        gap: 50px;
+    }
+}
 
 @media screen and (min-width: 1000px) {
     .hamburger {
@@ -134,7 +242,11 @@ body {
 
     .header__navigation li {
         background-color: transparent;
+    }
+
+    .header__navigation li a p {
         color: black;
         padding: 0;
     }
+
 }

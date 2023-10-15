@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="library.css">
     <title>ScriptSmith.css | Typographic library</title>
 </head>
 <body>
     <header class="body__header">
-        <h1>ScriptSmith.css</h1>
+        <h1><a href="#">ScriptSmith.css</a></h1>
         <div class="hamburger">
             <div class="hamburger__line hamburger__line--1"></div>
             <div class="hamburger__line hamburger__line--2"></div>
@@ -19,21 +20,69 @@
         </div>
         <nav class="header__navigation">
             <ul>
-                <li><a href="#">Headings</a></li>
-                <li><a href="#">Text</a></li>
-                <li><a href="#">Lists</a></li>
-                <li><a href="#">Table</a></li>
-                <li><a href="#">Alerts</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Code</a></li>
+                <li><a href="#1"><p>Headings</p></a></li>
+                <li><a href="#"><p>Text</p></a></li>
+                <li><a href="#"><p>Lists</p></a></li>
+                <li><a href="#"><p>Table</p></a></li>
+                <li><a href="#"><p>Alerts</p></a></li>
+                <li><a href="#"><p>Gallery</p></a></li>
+                <li><a href="#"><p>Code</p></a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <h2><span class="typed-text"></span></span></h1>
+        <h2><span class="typed-text"></span></h2>
     </div>
-
-
+    <main>
+      <section class="headings" id="1">
+        <h2>Headings</h2>
+        <p>These sizes of headings are diffent on mobile and desktop</p>
+        <div class="headings__pseudotable">
+          <div class="headings__grid">
+            <h3>For desktop</h3>
+            <p>h1</p>
+            <p class="h1--simulation--desktop">Example</p>
+            <p>34px</p>
+            <p>h2</p>
+            <p class="h2--simulation--desktop">Example</p>
+            <p>30px</p>
+            <p>h3</p>
+            <p class="h3--simulation--desktop">Example</p>
+            <p>24px</p>
+            <p>h4</p>
+            <p class="h4--simulation--desktop">Example</p>
+            <p>20px</p>
+            <p>h5</p>
+            <p class="h5--simulation--desktop">Example</p>
+            <p>18px</p>
+            <p>h6</p>
+            <p class="h6--simulation--desktop">Example</p>
+            <p>16px</p>
+          </div>
+          <div class="headings__grid">
+            <h3>For mobile</h3>
+            <p>h1</p>
+            <p class="h1--simulation--mobile">Example</p>
+            <p>24px</p>
+            <p>h2</p>
+            <p class="h2--simulation--mobile">Example</p>
+            <p>22px</p>
+            <p>h3</p>
+            <p class="h3--simulation--mobile">Example</p>
+            <p>20px</p>
+            <p>h4</p>
+            <p class="h4--simulation--mobile">Example</p>
+            <p>18px</p>
+            <p>h5</p>
+            <p class="h5--simulation--mobile">Example</p>
+            <p>16px</p>
+            <p>h6</p>
+            <p class="h6--simulation--mobile">Example</p>
+            <p>14px</p>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script>
     const hamburger = document.querySelector(".hamburger");
@@ -63,10 +112,10 @@
 
     const typedTextSpan = document.querySelector(".typed-text");
 
-    const textArray = ["Vítejte na ScriptSmith.css", "Willkommen in ScriptSmith.css", "Welcome to ScriptSmith.css", "Bienvenue sur ScriptSmith.css", "Добро пожаловать на ScriptSmith.css"];
+    const textArray = ["Welcome to ScriptSmith.css", "Willkommen in ScriptSmith.css", "Vítejte na ScriptSmith.css", "Bienvenue sur ScriptSmith.css", "Добро пожаловать на ScriptSmith.css"];
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newTextDelay = 1500;
+    const newTextDelay = 100;
     let textArrayIndex = 0;
     let charIndex = 0;
 
@@ -94,7 +143,7 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+    document.addEventListener("DOMContentLoaded", function() {
       if(textArray.length) setTimeout(type, newTextDelay + 250);
     });
     </script>
