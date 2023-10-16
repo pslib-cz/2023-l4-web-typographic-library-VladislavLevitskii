@@ -5,6 +5,7 @@
 
 html {
     font-family: 'Kameron', serif;
+    scroll-behavior: smooth;
 }
 
 body {
