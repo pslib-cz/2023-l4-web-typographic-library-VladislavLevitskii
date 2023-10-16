@@ -13,6 +13,10 @@ body {
     background-color: var(--background__colour);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .body__header {
     display: flex;
     margin-top: 15px;
@@ -214,6 +218,10 @@ main {
     text-align: center;
 }
 
+.examples__images figure:nth-child(2) {
+    margin: 20px 0;
+}
+
 @media screen and (min-width: 600px) {
     .headings__pseudotable {
         display: flex;
@@ -249,4 +257,8 @@ main {
         padding: 0;
     }
 
+    .examples__images {
+        display: flex;
+        gap: 50px;
+    }
 }

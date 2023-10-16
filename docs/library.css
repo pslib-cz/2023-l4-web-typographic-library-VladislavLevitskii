@@ -27,3 +27,47 @@ h6 {
     font-size: 14px;
     font-weight: bold;
 }
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+figcaption {
+    transition: .2s;
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    transform: translateY(100%);
+}
+
+figure:hover figcaption {
+    transform: translateY(0);
+    transition: .5s;
+}
+
+img {
+    transition: .2s;
+}
+
+figure:hover img {
+    transform: scale(1.5);
+    transition: .5s;
+}
