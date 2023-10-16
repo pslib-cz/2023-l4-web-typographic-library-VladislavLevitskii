@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/The_Cat.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kameron&display=swap" rel="stylesheet">
     <title>ScriptSmith.css | Typographic library</title>
 </head>
 <body>
@@ -21,20 +18,275 @@
         </div>
         <nav class="header__navigation">
             <ul>
-                <li><a href="#1"><p>Headings</p></a></li>
-                <li><a href="#"><p>Text</p></a></li>
-                <li><a href="#"><p>Images</p></a></li>
-                <li><a href="#"><p>Table</p></a></li>
-                <li><a href="#"><p>Alerts</p></a></li>
-                <li><a href="#"><p>Lists</p></a></li>
-                <li><a href="#"><p>Code</p></a></li>
+                <li><a href="#1"><p>Headings</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#2"><p>Text</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#3"><p>Images</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#4"><p>Table</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#5"><p>Lists</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#6"><p>Code</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#7"><p>Quotas</p></a><div class="header__navigation--underline"></div></li>
+                <li><a href="#8"><p>Buttons</p></a><div class="header__navigation--underline"></div></li>
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <h2><span class="typed-text"></span></h2>
-    </div>
     <main>
+      <div class="container">
+        <h2> <span class="typed-text"></span></h2>
+      </div>
+      <h2>ScriptSmith.css is a typographic library</h2>
+      <div class="listofbuttons">
+        <div href="#" class="button1" id="downloadButton">
+          <p>Download</p>
+          <div class="slider__button1"></div>
+        </div>
+        <div href="#" class="button2" id="copyButton">
+          <p>Copy to clipboard</p>
+          <div class="slider__button2"></div>
+          <pre id="cssCode">@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;500;700&display=swap');
+
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            
+            h2 {
+                font-size: 22px;
+                font-weight: bold;
+            }
+            
+            h3 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+            h4 {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+            h5 {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            
+            h6 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            
+            p {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            
+            img {
+                max-width: 100%;
+                display: block;
+                transition: .2s;
+            }
+            
+            figure {
+                position: relative;
+                overflow: hidden;
+                margin: 0;
+            }
+            
+            figcaption {
+                transition: .2s;
+                color: white;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                z-index: 1;
+                transform: translateY(100%);
+            }
+            
+            figure:hover figcaption {
+                transform: translateY(0);
+                transition: .5s;
+            }
+            
+            figure:hover img {
+                transform: scale(1.2);
+                transition: .5s;
+            }
+            
+            table {
+                border-collapse: collapse;
+            }
+            
+            td, th {
+                padding: 10px 5px;
+                text-align: center;
+            }
+            
+            thead {
+                background-color: rgba(185, 185, 185, 1);
+            }
+            
+            table > colgroup > col:first-child {
+                background-color: aquamarine;
+            }
+            
+            col:nth-child(even) {
+                background-color: rgba(165, 42, 42, 0.39);
+            }
+            
+            col:nth-child(odd) {
+                background-color: rgba(0, 0, 255, 0.39);
+            }
+            
+            ul > li::marker {
+                content: "-  ";
+            }
+            
+            li {
+                font-size: 18px;
+            }
+            
+            ol {
+                list-style: upper-roman;
+            }
+            
+            code {
+                background-color: var(--primarycolor);
+                color: wheat;
+                padding: 5px 10px;
+            }
+            
+            blockquote {
+                background-color: rgba(94, 94, 94, 0.219);
+                padding: 20px 50px;
+                margin: 0;
+                border-left: solid 3px gray;
+            }
+            
+            .author__blockquote {
+                text-align: right;
+                font-size: larger;
+                margin: 0;
+            }
+            
+            .button1 {
+                padding: 10px 20px;
+                width: fit-content;
+                font-size: 24px;
+                background-color: rgb(255, 217, 157);
+                color: inherit;
+                display: block;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            
+            .button1 p {
+                position: relative;
+                margin: 0;
+                z-index: 2;
+            }
+            
+            .slider__button1 {
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                position: absolute;
+                top: 0;
+                right: 100%;
+                transition: .5s;
+                z-index: 0;
+            }
+            
+            .button1:hover {
+                color: white;
+            }
+            
+            .button1:hover .slider__button1 {
+                transform: translateX(100%);
+                transition: .2s;
+            }
+            
+            .button2 {
+                padding: 10px 20px;
+                width: fit-content;
+                font-size: 24px;
+                background-color: rgb(255, 217, 157);
+                color: inherit;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            
+            .button2 p {
+                position: relative;
+                margin: 0;
+                z-index: 2;
+            }
+            
+            .slider__button2 {
+                width: 0px;
+                height: 0px;
+                border-radius: 100%;
+                position: absolute;
+                background-color: black;
+                transition: .5s;
+                z-index: 0;
+            }
+            
+            .button2:hover {
+                color: white;
+            }
+            
+            .button2:hover .slider__button2 {
+                width: 300px;
+                height: 300px;
+                transition: 1.5s;
+            }
+            
+            @media screen and (min-width: 700px) {
+                td, th {
+                    padding: 20px 25px;
+                    text-align: center;
+                }
+            }
+            
+            @media screen and (min-width: 1024px) {
+                h1 {
+                    font-size: 34px;
+                }
+                
+                h2 {
+                    font-size: 30px;
+                }
+                
+                h3 {
+                    font-size: 24px;
+                }
+                
+                h4 {
+                    font-size: 20px;
+                }
+                
+                h5 {
+                    font-size: 18px;
+                }
+                
+                h6 {
+                    font-size: 18px;
+                }
+            
+                p {
+                    font-size: 18px;
+                }
+            }</pre>
+        </div>
+      </div>
       <section class="headings" id="1">
         <h2>Headings</h2>
         <p>These sizes of headings are diffent on mobile and desktop</p>
@@ -83,30 +335,126 @@
           </div>
         </div>
       </section>
-      <section>
-        <h3>Text</h3>
+      <section id="2">
+        <h2>Text</h2>
         <p>Normal paragraph. This text is <u>underlined</u> and this text is <b>bold</b>. This text is <del>deleted</del> and this text is <mark>highlighted</mark>. There is <i>italic</i>. This text is <a href="#">clickable</a> and this text is <small>small</small></p>
       </section>
-      <section>
-        <h3>Images</h3>
+      <section id="3">
+        <h2>Images</h2>
         <p>By hovering the mouse over the image, a description of the picture is shown below and the picture itself is zoomed in</p>
         <div class="examples__images">
           <figure>
-            <figcaption>Description</figcaption>
+            <figcaption>Walking man</figcaption>
             <img src="https://i.kym-cdn.com/entries/icons/original/000/043/297/silhouettewalking.jpg" alt="Walking man">
           </figure>
           <figure>
-            <figcaption>Description</figcaption>
-            <img src="https://i.kym-cdn.com/entries/icons/original/000/043/297/silhouettewalking.jpg" alt="Walking man">
+            <figcaption>Google</figcaption>
+            <img src="https://www.google.co.uk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
           </figure>
           <figure>
-            <figcaption>Description</figcaption>
-            <img src="https://i.kym-cdn.com/entries/icons/original/000/043/297/silhouettewalking.jpg" alt="Walking man">
+            <figcaption>Liquipedia</figcaption>
+            <img src="https://liquipedia.net/commons/extensions/TeamLiquidIntegration/resources/pagelogo/liquipedia_icon_menu.png" alt="Liquipedia">
           </figure>
         </div>
       </section>
+      <section id="4">
+        <h2>Table</h2>
+        <table>
+          <caption></caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Price</th>
+              <th>Speed</th>
+              <th>Reliability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Aston Martin</th>
+              <td>$4 000 000</td>
+              <td>250 km/h</td>
+              <td>86%</td>
+            </tr>
+            <tr>
+              <th>Bentley</th>
+              <td>$8 000 000</td>
+              <td>350 km/h</td>
+              <td>74%</td>
+            </tr>
+            <tr>
+              <th>Lexus</th>
+              <td>$44 000 000</td>
+              <td>2500 km/h</td>
+              <td>999%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Car</th>
+              <td>Too many</td>
+              <td>~ 555km/h</td>
+              <td>0%</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section id="5">
+        <h2>Lists</h2>
+        <p>These types of lists are used</p>
+        <div class="lists--middle">
+          <ul>
+            <li>Countries
+              <ol>
+                <li>USA</li>
+                <li>China</li>
+                <li>Russia</li>
+                <li>Germany</li>
+                <li>Japan</li>
+              </ol>
+            </li>
+            <li>Alliances</li>
+            <li>Global threats</li>
+            <li>Czech beer</li>
+          </ul>
+        </div>
+      </section>
+      <section id="6">
+        <h2>Code</h2>
+        <p>This <code>font-size: 18px;</code> is a piece of code</p>
+      </section>
+      <section id="7">
+        <h2>Quotas</h2>
+        <p>This is an example of quota:</p>
+        <blockquote>
+          The Pope. How many divisions has he?
+          <p class="author__blockquote">Stalin</p>
+        </blockquote>
+      </section>
+      <section id="8">
+        <h2>Buttons</h2>
+        <p>These types of buttons are used:</p>
+        <div class="listofbuttons">
+          <div href="#" class="button1">
+            <p>Button</p>
+            <div class="slider__button1"></div>
+          </div>
+          <div href="#" class="button2">
+            <p>Button</p>
+            <div class="slider__button2"></div>
+          </div>
+        </div>
+      </section>
     </main>
-
+    <footer>
+      <p>This Typographic library was created by <a href="https://github.com/VladislavLevitskii"><strong>Levad</strong></a></p>
+    </footer>
     <script>
     const hamburger = document.querySelector(".hamburger");
     const navigation = document.querySelector(".header__navigation");
@@ -135,7 +483,7 @@
 
     const typedTextSpan = document.querySelector(".typed-text");
 
-    const textArray = ["Welcome to ScriptSmith.css", "Willkommen in ScriptSmith.css", "Vítejte na ScriptSmith.css", "Bienvenue sur ScriptSmith.css", "Добро пожаловать на ScriptSmith.css"];
+    const textArray = ["Welcome to ScriptSmith.css", "Willkommen bei ScriptSmith.css", "Vítejte na ScriptSmith.css", "Bienvenue sur ScriptSmith.css", "Добро пожаловать на ScriptSmith.css"];
     const typingDelay = 100;
     const erasingDelay = 50;
     const newTextDelay = 100;
@@ -169,6 +517,47 @@
     document.addEventListener("DOMContentLoaded", function() {
       if(textArray.length) setTimeout(type, newTextDelay + 250);
     });
+
+    const copyButton = document.getElementById('copyButton');
+    const cssCode = document.getElementById('cssCode');
+
+    // Добавляем обработчик события нажатия на кнопку
+    copyButton.addEventListener('click', function() {
+    // Создаем временный элемент textarea для копирования текста
+    const textArea = document.createElement('textarea');
+    textArea.value = cssCode.textContent; // Устанавливаем текст в textarea
+    document.body.appendChild(textArea); // Добавляем textarea в документ
+    textArea.select(); // Выделяем текст в textarea
+    document.execCommand('copy'); // Копируем выделенный текст в буфер обмена
+    document.body.removeChild(textArea); // Удаляем временный элемент
+
+    // Изменяем текст на кнопке после копирования
+    copyButton.innerText = 'CSS was copied!';
+    
+    // Восстанавливаем исходный текст через некоторое время
+    setTimeout(function() {
+        copyButton.innerText = 'Copy to clipboard';
+    }, 2000);
+});
+
+    function downloadExistingCSS() {
+        // Создаем ссылку на существующий CSS файл
+        const cssFileURL = 'library.css'; // Замените на фактический путь к вашему CSS файлу
+    
+        // Создаем ссылку для скачивания
+        const a = document.createElement('a');
+        a.href = cssFileURL;
+        a.download = 'styles.css'; // Имя файла для скачивания (можете изменить по желанию)
+        a.style.display = 'none';
+    
+        // Добавляем ссылку в документ и эмулируем клик
+        document.body.appendChild(a);
+        a.click();
+    }
+
+    // Получаем ссылку на кнопку и добавляем обработчик события
+    const downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', downloadExistingCSS);
     </script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400;500;700&display=swap');
+
 h1 {
     font-size: 24px;
     font-weight: bold;
@@ -34,8 +36,9 @@ p {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     display: block;
+    transition: .2s;
 }
 
 figure {
@@ -63,11 +66,178 @@ figure:hover figcaption {
     transition: .5s;
 }
 
-img {
+figure:hover img {
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px 5px;
+    text-align: center;
+}
+
+thead {
+    background-color: rgba(185, 185, 185, 1);
+}
+
+table > colgroup > col:first-child {
+    background-color: aquamarine;
+}
+
+col:nth-child(even) {
+    background-color: rgba(165, 42, 42, 0.39);
+}
+
+col:nth-child(odd) {
+    background-color: rgba(0, 0, 255, 0.39);
+}
+
+ul > li::marker {
+    content: "-  ";
+}
+
+li {
+    font-size: 18px;
+}
+
+ol {
+    list-style: upper-roman;
+}
+
+code {
+    background-color: var(--primarycolor);
+    color: wheat;
+    padding: 5px 10px;
+}
+
+blockquote {
+    background-color: rgba(94, 94, 94, 0.219);
+    padding: 20px 50px;
+    margin: 0;
+    border-left: solid 3px gray;
+}
+
+.author__blockquote {
+    text-align: right;
+    font-size: larger;
+    margin: 0;
+}
+
+.button1 {
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 24px;
+    background-color: rgb(255, 217, 157);
+    color: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button1 p {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+}
+
+.slider__button1 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: .5s;
+    z-index: 0;
+}
+
+.button1:hover {
+    color: white;
+}
+
+.button1:hover .slider__button1 {
+    transform: translateX(100%);
     transition: .2s;
 }
 
-figure:hover img {
-    transform: scale(1.5);
+.button2 {
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 24px;
+    background-color: rgb(255, 217, 157);
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button2 p {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+}
+
+.slider__button2 {
+    width: 0px;
+    height: 0px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: black;
     transition: .5s;
+    z-index: 0;
+}
+
+.button2:hover {
+    color: white;
+}
+
+.button2:hover .slider__button2 {
+    width: 300px;
+    height: 300px;
+    transition: 1.5s;
+}
+
+@media screen and (min-width: 700px) {
+    td, th {
+        padding: 20px 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-size: 18px;
+    }
+    
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
 }
