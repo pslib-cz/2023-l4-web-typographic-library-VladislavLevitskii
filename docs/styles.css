@@ -304,8 +304,83 @@ footer p {
 .listofbuttons {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
 }
+
+.button1 {
+    padding: 1px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button2 {
+    padding: 1px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button3 {
+    padding: 1px 1px;
+    width: fit-content;
+    font-size: 24px;
+    background-color: rgb(255, 217, 157);
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button3:visited {
+    text-decoration: none !important;
+}
+
+.button3 p {
+    position: relative;
+    margin: 0;
+    z-index: 2;
+}
+
+.slider__button3 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: .5s;
+    z-index: 0;
+}
+
+.button3:hover {
+    color: white;
+}
+
+.button3:hover .slider__button3 {
+    transform: translateX(-100%);
+    transition: .2s;
+}
+
+@media screen and (min-width: 400px) {
+    .button1 {
+        padding: 10px 20px;
+    }
+
+    .button2 {
+        padding: 10px 20px;
+    }
+
+    .button3 {
+        padding: 10px 20px;
+    }
+}
+
+
 
 @media screen and (min-width: 450px){
     img {
