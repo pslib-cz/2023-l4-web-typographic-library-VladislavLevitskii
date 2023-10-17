@@ -16,20 +16,21 @@ body {
 
 ::-webkit-scrollbar {
     width: 10px;
-    background-color: papayawhip; 
-  }
+}
   
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
+    background: papayawhip; 
+}
 
   ::-webkit-scrollbar-thumb {
     background: #888; 
-  }
+}
   
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
-  }
+}
+
+
 
 .body__header {
     display: flex;
