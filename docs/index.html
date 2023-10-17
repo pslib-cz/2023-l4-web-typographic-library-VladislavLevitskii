@@ -349,7 +349,7 @@
         <div class="examples__images">
           <figure>
             <figcaption>Walking man</figcaption>
-            <img id="animated-gif" src="../docs/images/man.jpg" alt="Walking man">
+            <img id="animated-gif" src="images/man.jpg" alt="Walking man">
           </figure>
           <figure>
             <figcaption>Google</figcaption>
@@ -466,14 +466,14 @@ let isPlaying = false;
 
 animatedGif.addEventListener('mouseenter', () => {
     if (!isPlaying) {
-        animatedGif.src = '../docs/images/jEo23z.gif'; // Загрузите GIF, чтобы начать анимацию
+        animatedGif.src = 'images/jEo23z.gif'; // Загрузите GIF, чтобы начать анимацию
         isPlaying = true;
     }
 });
 
 animatedGif.addEventListener('mouseleave', () => {
     if (isPlaying) {
-        animatedGif.src = '../docs/images/man.jpg'; // Остановите анимацию, загрузив пустой URL
+        animatedGif.src = 'images/man.jpg'; // Остановите анимацию, загрузив пустой URL
         isPlaying = false;
     }
 });
