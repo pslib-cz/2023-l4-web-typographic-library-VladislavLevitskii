@@ -171,9 +171,14 @@ pre {
 
 .container {
     display: flex;
-    margin: 30px 20px;
+    margin: 30px 20px 0 20px;
     justify-content: center;
-  }
+}
+
+.container h2 {
+    height: 54px;
+    margin: 0;
+}
 
 .container h2 span.typed-text {
     font-weight: bold;
