@@ -464,6 +464,7 @@ footer p {
 
     .examples__images {
         display: flex;
+        align-items: center;
         gap: 50px;
     }
 }
