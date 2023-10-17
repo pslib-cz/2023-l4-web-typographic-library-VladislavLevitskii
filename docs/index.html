@@ -349,7 +349,7 @@
         <div class="examples__images">
           <figure>
             <figcaption>Walking man</figcaption>
-            <img src="https://i.kym-cdn.com/entries/icons/original/000/043/297/silhouettewalking.jpg" alt="Walking man">
+            <img id="animated-gif" src="../docs/images/man.jpg" alt="Walking man">
           </figure>
           <figure>
             <figcaption>Google</figcaption>
@@ -460,6 +460,24 @@
       <p>This Typographic library was created by <a href="https://github.com/VladislavLevitskii"><strong>Levad</strong></a></p>
     </footer>
     <script>
+
+const animatedGif = document.getElementById('animated-gif');
+let isPlaying = false;
+
+animatedGif.addEventListener('mouseenter', () => {
+    if (!isPlaying) {
+        animatedGif.src = '../docs/images/jEo23z.gif'; // Загрузите GIF, чтобы начать анимацию
+        isPlaying = true;
+    }
+});
+
+animatedGif.addEventListener('mouseleave', () => {
+    if (isPlaying) {
+        animatedGif.src = '../docs/images/man.jpg'; // Остановите анимацию, загрузив пустой URL
+        isPlaying = false;
+    }
+});
+
     const hamburger = document.querySelector(".hamburger");
     const navigation = document.querySelector(".header__navigation");
     const hamburger__line1 = document.querySelector(".hamburger__line--1");
