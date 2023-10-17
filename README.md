@@ -153,7 +153,7 @@ Implementation of quotas:
 </blockquote>
 ```
 
-** `<p class="author__blockquote"></p>` defines author and places it in right bottom corner**
+**`<p class="author__blockquote"></p>` defines author and places it in right bottom corner**
 
 ## Buttons
 Library has 2 varients for buttons with different animation (you have to change every 1's to 2's)
